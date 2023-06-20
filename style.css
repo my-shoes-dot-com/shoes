@@ -1,0 +1,168 @@
+:root{
+    --primary:#f5fff4;
+    --secondary:#324b48;
+    --tertiary:#00ffdd;
+}
+
+.container1{
+    height: 45vh;
+    background-image: url(assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ------------------------------------header-------------------------------------------------- */
+.header{
+    width: 100vw;
+    height: inherit;
+    position: relative;
+    background: linear-gradient(to top,
+    var(--secondary), #00000000);
+}
+
+.header nav{
+    width: 100vw;
+    display: flex;
+    justify-content: right;
+}
+
+.header nav a{
+    text-decoration: none;
+    font-size: 24px;
+    margin: 5px 25px 5px 0;
+    color: var(--tertiary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    font-weight: 450;
+    text-shadow: 0 0 5px var(--secondary);
+}
+
+.header nav a::after{
+    content: '';
+    width: 100%;
+    height: 15%;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    background: var(--tertiary);
+    transition: 0.8s;
+}
+
+.header nav a:hover::after{
+    width: 100%;
+}
+
+.header h1{
+    position: absolute;
+    width: 100vw;
+    top: 40%;
+    transform: translateY(-50%);
+    color: var(--primary);
+    font-size: 64px;
+    text-align: center;
+}
+
+body{
+    margin: 0;
+    font-family: serif;
+    background-color: var(--primary);
+    overflow-x: hidden;
+}
+
+/* body::-webkit-scrollbar{
+    display: none;
+} */
+
+/* -------------------------------------------------------------------------------content-------------------------------------------- */
+.content{
+    margin: 5px 15vw 5px 15vw;
+    font-size: 1.3rem;
+    color: var(--secondary);
+    background-color: var(--primary);
+}
+
+.content div{
+    margin: 50px 0;
+}
+
+.contact #contact-info div{
+    display: flex;
+    margin: 10px 0 10px 0;
+    align-items: center;
+}
+
+.contact #contact-info div section{
+    margin-left: 10px;
+}
+
+/* --------------------------------------------------footer------------------------------------------------------ */
+footer{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+/* -------------------------------------521 to 700-------------------------------------------- */
+@media only screen and (max-width:720px) and (min-width:521px){
+    .header nav a{
+        font-weight: 500;
+        text-shadow: 0 0 3px var(--secondary);
+    }
+
+    .header h1{
+        font-size: 48px;
+    }
+
+    .header{
+        background: linear-gradient(to top,
+            var(--secondary), #0000001f);
+    }
+
+    svg{
+        width: 40px;
+        height: 40px;
+    }
+
+    .content div section{
+        font-size: 1.5rem;
+    }
+}
+
+
+/* -----------------------------------------to 521---------------------------------------------------- */
+@media only screen and (max-width:520px) and (min-width:321px){
+    .header{
+        background: linear-gradient(to top,
+            var(--secondary), #0000003a);
+    }
+
+    .header h1{
+        font-size: 36px;
+    }
+
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* -------------------------------------tiny screen--------------------------------- */
+@media only screen and (max-width:320px){
+    .header nav a{
+        font-size: 20px;
+    }
+
+    .header h1{
+        font-size: 32px;
+    }
+
+    .content div section{
+        font-size: 1rem;
+    }
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
