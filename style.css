@@ -1,15 +1,16 @@
 :root{
-    --primary:#f5fff4;
-    --secondary:#324b48;
-    --tertiary:#00ffdd;
+    --primary:#fffff4;
+    --secondary:#3f3a1e;
+    --tertiary:#c0a676;
 }
 
 .container1{
     height: 45vh;
-    background-image: url(assets/background.jpg);
+    background-image: url(assets/fav3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 /* ------------------------------------header-------------------------------------------------- */
@@ -17,8 +18,7 @@
     width: 100vw;
     height: inherit;
     position: relative;
-    background: linear-gradient(to top,
-    var(--secondary), #00000000);
+    background: #0000009c;
 }
 
 .header nav{
@@ -69,6 +69,8 @@ body{
     font-family: serif;
     background-color: var(--primary);
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* body::-webkit-scrollbar{
@@ -81,6 +83,7 @@ body{
     font-size: 1.3rem;
     color: var(--secondary);
     background-color: var(--primary);
+    padding-bottom: 100px;
 }
 
 .content div{
@@ -89,18 +92,40 @@ body{
 
 .contact #contact-info div{
     display: flex;
-    margin: 10px 0 10px 0;
+    margin: 1rem 0 1rem 0;
     align-items: center;
 }
 
-.contact #contact-info div section{
-    margin-left: 10px;
+#contact-info a{
+    text-decoration: none;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+#contact-info a:hover, #contact-info div section:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 0.2rem;
+}
+.contact #contact-info div a section{
+    margin-left: 10px;
+}
+/* ----------------------------------------------svg icons-------------------------------------------- */
+#contact-info div svg:hover{
+    animation-name: expand;
+    animation-duration: 1s;
+}
+@keyframes expand{
+    from, to{transform: scale(1);}
+    50%{transform: scale(1.4);}
+}
 /* --------------------------------------------------footer------------------------------------------------------ */
 footer{
     text-align: center;
-    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
 }
 
 
@@ -115,11 +140,6 @@ footer{
         font-size: 48px;
     }
 
-    .header{
-        background: linear-gradient(to top,
-            var(--secondary), #0000001f);
-    }
-
     svg{
         width: 40px;
         height: 40px;
@@ -131,15 +151,10 @@ footer{
 }
 
 
-/* -----------------------------------------to 521---------------------------------------------------- */
+/* -----------------------------------------321 to 520---------------------------------------------------- */
 @media only screen and (max-width:520px) and (min-width:321px){
-    .header{
-        background: linear-gradient(to top,
-            var(--secondary), #0000003a);
-    }
-
     .header h1{
-        font-size: 36px;
+        font-size: 2rem;
     }
 
     svg{
@@ -151,7 +166,7 @@ footer{
 /* -------------------------------------tiny screen--------------------------------- */
 @media only screen and (max-width:320px){
     .header nav a{
-        font-size: 20px;
+        font-size: 1rem;
     }
 
     .header h1{
